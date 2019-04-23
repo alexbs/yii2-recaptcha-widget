@@ -55,7 +55,7 @@ public function rules()
 {
   return [
       // ...
-      [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator2::className(),
+      [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator2::class,
         'secret' => 'your secret key', // unnecessary is reCaptcha component was set up
         'uncheckedMessage' => 'Please confirm that you are not a bot.'],
   ];
@@ -70,7 +70,7 @@ public function rules()
 {
   return [
       // ...
-      [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator3::className(),
+      [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator3::class,
         'secret' => 'your secret key', // unnecessary is reCaptcha component was set up
         'threshold' => 0.5,
         'action' => 'homepage',
@@ -86,7 +86,7 @@ For example:
 v2
 ```php
 <?= $form->field($model, 'reCaptcha')->widget(
-    \himiklab\yii2\recaptcha\ReCaptcha2::className(),
+    \himiklab\yii2\recaptcha\ReCaptcha2::class,
     [
         'siteKey' => 'your siteKey', // unnecessary is reCaptcha component was set up
     ]
@@ -96,7 +96,7 @@ v2
 v3
 ```php
 <?= $form->field($model, 'reCaptcha')->widget(
-    \himiklab\yii2\recaptcha\ReCaptcha3::className(),
+    \himiklab\yii2\recaptcha\ReCaptcha3::class,
     [
         'siteKey' => 'your siteKey', // unnecessary is reCaptcha component was set up
         'action' => 'homepage',
